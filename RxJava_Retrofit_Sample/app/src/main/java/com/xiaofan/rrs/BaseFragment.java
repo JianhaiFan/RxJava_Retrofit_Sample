@@ -1,7 +1,7 @@
 package com.xiaofan.rrs;
 
-import android.app.AlertDialog;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 
 import butterknife.OnClick;
 import rx.Subscription;
