@@ -9,6 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.xiaofan.rrs.module.elementary_1.ElementaryFragment;
+import com.xiaofan.rrs.module.map_2.MapFragment;
+import com.xiaofan.rrs.module.token_4.TokenFragment;
+import com.xiaofan.rrs.module.token_advanced_5.TokenAdvancedFragment;
+import com.xiaofan.rrs.module.zip_3.ZipFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -29,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public int getCount() {
-                return 1;
+                return 5;
             }
 
             @Override
@@ -38,13 +42,13 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         return new ElementaryFragment();
                     case 1:
-//                        return new MapFragment();
+                        return new MapFragment();
                     case 2:
-//                        return new ZipFragment();
+                        return new ZipFragment();
                     case 3:
-//                        return new TokenFragment();
+                        return new TokenFragment();
                     case 4:
-//                        return new TokenAdvancedFragment();
+                        return new TokenAdvancedFragment();
                     case 5:
 //                        return new CacheFragment();
                     default:
@@ -59,13 +63,13 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         return getString(R.string.title_elementary);
                     case 1:
-//                        return getString(R.string.title_map);
+                        return getString(R.string.title_map);
                     case 2:
-//                        return getString(R.string.title_zip);
+                        return getString(R.string.title_zip);
                     case 3:
-//                        return getString(R.string.title_token);
+                        return getString(R.string.title_token);
                     case 4:
-//                        return getString(R.string.title_token_advanced);
+                        return getString(R.string.title_token_advanced);
                     case 5:
 //                        return getString(R.string.title_cache);
                     default:
