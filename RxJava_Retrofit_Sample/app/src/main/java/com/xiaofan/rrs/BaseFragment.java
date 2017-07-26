@@ -2,6 +2,7 @@ package com.xiaofan.rrs;
 
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 
 import butterknife.OnClick;
 import rx.Subscription;
@@ -15,6 +16,7 @@ public abstract class BaseFragment extends Fragment {
 
     @OnClick(R.id.tipBt)
     void tip() {
+        Log.e("fan","baseFragment...");
         new AlertDialog.Builder(getActivity())
                 .setTitle(getTitleRes())
                 .setView(getActivity().getLayoutInflater().inflate(getDialogRes(), null))

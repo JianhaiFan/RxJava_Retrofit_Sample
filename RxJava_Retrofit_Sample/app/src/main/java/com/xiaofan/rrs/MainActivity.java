@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import com.xiaofan.rrs.module.cache_6.CacheFragment;
 import com.xiaofan.rrs.module.elementary_1.ElementaryFragment;
 import com.xiaofan.rrs.module.map_2.MapFragment;
 import com.xiaofan.rrs.module.token_4.TokenFragment;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public int getCount() {
-                return 5;
+                return 6;
             }
 
             @Override
@@ -50,10 +51,9 @@ public class MainActivity extends AppCompatActivity {
                     case 4:
                         return new TokenAdvancedFragment();
                     case 5:
-//                        return new CacheFragment();
+                        return new CacheFragment();
                     default:
-//                        return new ElementaryFragment();
-                    return null;
+                        return new ElementaryFragment();
                 }
             }
 
@@ -71,10 +71,9 @@ public class MainActivity extends AppCompatActivity {
                     case 4:
                         return getString(R.string.title_token_advanced);
                     case 5:
-//                        return getString(R.string.title_cache);
+                        return getString(R.string.title_cache);
                     default:
-//                        return getString(R.string.title_elementary);
-                        return "";
+                        return getString(R.string.title_elementary);
                 }
             }
         });
